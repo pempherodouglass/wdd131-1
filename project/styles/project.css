@@ -1,0 +1,407 @@
+/* ==========================================
+   COLOR SCHEMA & TYPOGRAPHY CONSTANTS
+   ========================================== */
+:root {
+    --primary-color: #0A4D68;    /* Dark Blue */
+    --accent-color: #F4A300;     /* Golden Yellow */
+    --bg-color: #FDF6EC;         /* Light Beige */
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --card-bg: #ffffff;
+    --font-heading: 'Merriweather', Georgia, serif;
+    --font-body: 'Roboto', Arial, sans-serif;
+}
+
+/* ==========================================
+   BASE RESET & LAYOUTS
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ==========================================
+   HEADER & NAVIGATION RULES
+   ========================================== */
+header {
+    background-color: var(--primary-color);
+    border-bottom: 4px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-area h1 {
+    color: var(--text-light);
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+/* ==========================================
+   HERO BANNER
+   ========================================== */
+.hero {
+    background-linear-gradient: (rgba(10, 77, 104, 0.85), rgba(10, 77, 104, 0.85));
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   WIREFRAME GRID LAYOUT MANAGEMENT
+   ========================================== */
+.main-layout, .secondary-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Card Component Design */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid rgba(10, 77, 104, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* UI Boxes & Containers */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.ui-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+.ui-card ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+
+.ui-card li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details {
+    margin-top: 1rem;
+    background: #fcfcfc;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   DIRECTORY & FILTER INTERFACE MODULES
+   ========================================== */
+.directory-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-controls select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-left: 0.5rem;
+}
+
+.badge-count {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.fav-btn {
+    background-color: #f0f0f0;
+    color: var(--text-dark);
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.fav-btn.active {
+    background-color: #ffdde2;
+    color: #c0392b;
+    border-color: #e74c3c;
+}
+
+/* ==========================================
+   ACCESSIBLE ACCURATE ACCENTED FORMS
+   ========================================== */
+.form-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+fieldset {
+    border: 1px solid #ccd;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.25rem 0;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #063447;
+}
+
+.feedback-box {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 5px solid #4caf50;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================
+   FOOTER RULES
+   ========================================== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--accent-color);
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM SHIFTS
+   ========================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main-layout, .secondary-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .filter-controls select {
+        margin-left: 0;
+        margin-top: 0.25rem;
+        width: 100%;
+    }
+}

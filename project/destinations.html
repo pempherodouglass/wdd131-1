@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malawi Tourism Guide - Destinations Directory</title>
+    <meta name="description" content="Explore beautiful travel hubs in Malawi. Filter through national lakes, mountain adventures, and premium wildlife safaris.">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="45" fill="#F4A300"/>
+                    <path d="M20,70 Q50,30 80,70" fill="none" stroke="#0A4D68" stroke-width="8"/>
+                </svg>
+                <h1>Malawi Tourism Guide</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html" class="active">Destinations</a></li>
+                    <li><a href="contact.html">Plan a Trip</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="directory-header">
+            <h2>Explore Our Regional Treasures</h2>
+            <p>Filter through destinations to create your custom dream itinerary across Malawi.</p>
+        </section>
+
+        <!-- Dynamic Filter Controls Block -->
+        <section class="filter-controls">
+            <div>
+                <label for="category-filter">Filter by Type:</label>
+                <select id="category-filter">
+                    <option value="All">All Categories</option>
+                    <option value="Lake">Lakes &amp; Waterways</option>
+                    <option value="Wildlife">Wildlife &amp; Safaris</option>
+                    <option value="Adventure">Mountain &amp; Adventure</option>
+                </select>
+            </div>
+            <div class="counter-display">
+                <p>Saved to Trip: <span id="fav-count" class="badge-count">0</span> items</p>
+            </div>
+        </section>
+
+        <!-- Target Injection Container for JavaScript Engine -->
+        <section id="destinations-grid" class="grid-container">
+            <!-- Dynamic Cards injected via script -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Malawi Tourism Guide. All rights reserved.</p>
+        <p id="last-modified"></p>
+        <p><a href="references.html">Sources &amp; References Page</a></p>
+    </footer>
+</body>
+</html>

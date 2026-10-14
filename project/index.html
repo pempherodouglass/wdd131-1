@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malawi Tourism Guide - Home</title>
+    <meta name="description" content="Discover the Warm Heart of Africa. Plan your trip with the official Malawi Tourism Guide featuring Lake Malawi, national parks, and cultural highlights.">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <!-- Placeholder SVG icon serving as a professional native inline vector logo -->
+                <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="45" fill="#F4A300"/>
+                    <path d="M20,70 Q50,30 80,70" fill="none" stroke="#0A4D68" stroke-width="8"/>
+                </svg>
+                <h1>Malawi Tourism Guide</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="contact.html">Plan a Trip</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Wireframe Element: HERO IMAGE BANNER -->
+        <section class="hero">
+            <h2>Experience the Warm Heart of Africa</h2>
+            <p>From pristine crystal waters to majestic high peak mountains and vibrant cultural wildlife sanctuaries.</p>
+            <a href="destinations.html" class="cta-btn">Explore Destinations</a>
+        </section>
+
+        <!-- Desktop Wireframe Row 1: FEATURED PLACE & TOURIST ATTRACTIONS -->
+        <div class="main-layout">
+            <!-- Wireframe Element: FEATURED PLACE -->
+            <section class="featured-box">
+                <h2>Featured Destination</h2>
+                <div class="card">
+                    <!-- Standardized optimized dimensions using native lazy loading below the fold -->
+                    <img src="images/images.jfif" alt="Crystal clear waters of Lake Malawi with traditional fishing boat" width="600" height="400" loading="lazy">
+                    <div class="card-body">
+                        <h3>Lake Malawi</h3>
+                        <p>An inland freshwater sea teeming with hundreds of species of colorful cichlid fish, bordered by golden sandy beaches and offering premium kayaking, snorkeling, and relaxation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wireframe Element: TOURIST ATTRACTIONS -->
+            <section class="attractions-box">
+                <h2>Top Attractions</h2>
+                <div class="grid-container">
+                    <div class="ui-card">
+                        <h3>Liwonde National Park</h3>
+                        <p>Malawi's premier wildlife destination featuring river boat safaris, elephants, hippos, and a flourishing black rhino sanctuary along the majestic Shire River.</p>
+                    </div>
+                    <div class="ui-card">
+                        <h3>Mount Mulanje</h3>
+                        <p>The magnificent island in the sky. Massive granite mountains rising above lush tea estates, perfect for multi-day trekking and hiking adventures.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Desktop Wireframe Row 2: TRAVEL TIPS & CONTACT INFORMATION -->
+        <div class="secondary-layout">
+            <!-- Wireframe Element: TRAVEL TIPS -->
+            <section class="tips-box">
+                <h2>Essential Travel Tips</h2>
+                <div class="ui-card">
+                    <ul>
+                        <li><strong>Best Time to Visit:</strong> May to October during the cool, dry winter season when wildlife viewing is optimal.</li>
+                        <li><strong>Currency:</strong> Malawian Kwacha (MWK). ATMs are readily available in major urban centers.</li>
+                        <li><strong>Entry Requirements:</strong> Check e-visa portals before traveling; many nationalities get visa-free entry or visas on arrival.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Wireframe Element: CONTACT INFORMATION -->
+            <section class="contact-info-box">
+                <h2>Contact Information</h2>
+                <div class="ui-card">
+                    <p>Have questions about planning your customized itinerary to Malawi? Reach out to our local destination experts today.</p>
+                    <p class="contact-details">
+                        📍 <strong>Office:</strong> Lilongwe City Centre, Malawi<br>
+                        📧 <strong>Email:</strong> info@malawitourismguide.com<br>
+                        📞 <strong>Phone:</strong> +265 1 770 111
+                    </p>
+                    <p>Saved Destinations Count: <span id="fav-count-home" class="badge-count">0</span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Malawi Tourism Guide. All rights reserved.</p>
+        <p id="last-modified"></p>
+        <p><a href="references.html">Sources &amp; References Page</a></p>
+    </footer>
+</body>
+</html>

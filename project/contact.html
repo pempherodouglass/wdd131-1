@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malawi Tourism Guide - Plan Your Trip</title>
+    <meta name="description" content="Get in touch with local Malawian destination management professionals to book your upcoming lodge stay or safari trail.">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="45" fill="#F4A300"/>
+                    <path d="M20,70 Q50,30 80,70" fill="none" stroke="#0A4D68" stroke-width="8"/>
+                </svg>
+                <h1>Malawi Tourism Guide</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="contact.html" class="active">Plan a Trip</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Plan Your Malawian Adventure</h2>
+            <p>Fill out our secure exploration form below. A local guide will formulate a custom trip itinerary based on your choices.</p>
+            
+            <form id="tour-inquiry-form" method="GET" action="#">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+                    
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Travel Preferences</legend>
+                    
+                    <label for="destination-interest">Primary Target Destination *</label>
+                    <select id="destination-interest" name="destination" required>
+                        <option value="" disabled selected>Choose a destination...</option>
+                        <option value="lake">Lake Malawi National Park</option>
+                        <option value="liwonde">Liwonde Wildlife Reserve</option>
+                        <option value="mulanje">Mount Mulanje Highlands</option>
+                        <option value="nyika">Nyika Alpine Plateau</option>
+                    </select>
+
+                    <label for="travelers">Number of Travelers</label>
+                    <input type="number" id="travelers" name="travelers" min="1" max="50" value="1">
+                    
+                    <label for="notes">Special Requirements / Message</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Let us know about dietary restrictions, accessibility requirements, or specific animals you want to see..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+
+            <!-- Dynamic element handled seamlessly by JavaScript DOM -->
+            <div id="form-feedback" class="feedback-box hidden" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Malawi Tourism Guide. All rights reserved.</p>
+        <p id="last-modified"></p>
+        <p><a href="references.html">Sources &amp; References Page</a></p>
+    </footer>
+</body>
+</html>
