@@ -19,7 +19,6 @@ const localDestinations = [
     { id: "mw-majete", name: "Majete Wildlife Reserve", category: "Wildlife", desc: "Malawi's premier conservation success story hosting all the Big Five animals safely." }
 ];
 
-// Document Event initiation hook
 document.addEventListener("DOMContentLoaded", () => {
     initializeMobileNavigation();
     injectFooterTimestamp();
